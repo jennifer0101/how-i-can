@@ -17,13 +17,21 @@
     <header>    
     </header>
 
-    Enter Text Here:
-    <textarea id="textArea"></textarea>
-    <br>
-    <button type="reset" onclick="clearText()">Clear</button>
-    <br>
-    <button type="button" onclick="evalFunction()">Try it</button>
-    <p id="demo"></p>
+    <div id="container">
+    
+        Enter Text Here:
+        <textarea id="textArea"></textarea>
+        <br>
+        <p id="results">Results will display here:</p>
+        <p id="demo"></p>
+        <br>
+        <br>
+        <input type ="button" id="clearBtn" value="Clear" type="reset" onclick="clearText()">
+        <br>
+        <button id="testBtn" type="button" onclick="evalFunction()">Test</button>
+    
+
+    </div>
 
     <footer>
     </footer>

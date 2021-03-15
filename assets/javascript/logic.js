@@ -1,9 +1,7 @@
-// function push(element) 
-// {
-//     alert("clicked on " + element.value);
-// }
+function clearText(){
+document.getElementById("textArea").value="";
 
-
+}
 
 function evalFunction() {
     var x = document.getElementById("textArea").value;
