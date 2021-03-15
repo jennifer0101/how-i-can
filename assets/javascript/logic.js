@@ -1,13 +1,22 @@
+// function to clear the text field when 'clear' button is clicked
 function clearText(){
-document.getElementById("textArea").value="";
-
+    document.getElementById("textArea").value="";
 }
 
-function evalFunction() {
-    var x = document.getElementById("textArea").value;
-    document.getElementById("demo").innerHTML = x;
-  }
+// function to evaluate text field and display results
+// function evalFunction() {
+//     let x = document.getElementById("textArea").value;
+//     document.getElementById("demo").innerHTML = x;
+//   }
 
+function evalFunction() {
+    let x = document.getElementById("textArea").value;
+    console.log(x);
+    for (let i=0; i < x.length; i++) {
+        console.log('number', x[i]);
+    }
+    // document.getElementById("demo").innerHTML = x;
+  }
 
 
 // function evaluateText(input){
