@@ -14,6 +14,14 @@ function evalFunction() {
     console.log(x);
     for (let i=0; i < x.length; i++) {
         console.log('number', x[i]);
+        
+        
+    } 
+    
+    if (isNaN(x)) {
+        alert ("The result is text.");
+    } else {
+        alert ("The result is a number.");
     }
     // document.getElementById("demo").innerHTML = x;
   }
