@@ -1,11 +1,19 @@
-function push(element) 
-{
-    alert("clicked on " + element.value);
-}
+// function push(element) 
+// {
+//     alert("clicked on " + element.value);
+// }
+
+
+
+function evalFunction() {
+    var x = document.getElementById("textArea").value;
+    document.getElementById("demo").innerHTML = x;
+  }
 
 
 
 // function evaluateText(input){
+//     alert("clicked on " + element.value);
 //     let str = String(input);
 //     for( let i = 0; i < str.length; i++){
 //               console.log(str.charAt(i));
