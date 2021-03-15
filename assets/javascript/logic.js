@@ -4,36 +4,16 @@ function clearText(){
 }
 
 // function to evaluate text field and display results
-// function evalFunction() {
-//     let x = document.getElementById("textArea").value;
-//     document.getElementById("demo").innerHTML = x;
-//   }
-
-function evalFunction() {
+function evalFunction(){
     let x = document.getElementById("textArea").value;
     console.log(x);
     for (let i=0; i < x.length; i++) {
-        console.log('number', x[i]);
-        
-        
-    } 
-    
-    if (isNaN(x)) {
-        alert ("The result is text.");
+        console.log('number', x[i]);    
+    } if(isNaN(x)) {
+        document.getElementById("demo").innerHTML =("The result is text."); 
     } else {
-        alert ("The result is a number.");
+        document.getElementById("demo").innerHTML =("The result is a number.");
     }
-    // document.getElementById("demo").innerHTML = x;
   }
 
 
-// function evaluateText(input){
-//     alert("clicked on " + element.value);
-//     let str = String(input);
-//     for( let i = 0; i < str.length; i++){
-//               console.log(str.charAt(i));
-//         if(!isNaN(str.charAt(i))){           //if the string is a number, do the following
-//             return true;
-//         }
-//     }
-// }
