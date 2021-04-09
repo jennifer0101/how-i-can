@@ -18,8 +18,8 @@ body {
     margin-bottom: 15px;
 }
 
-#clearBtn {
-    width: 75px;
+#clearBtn, #testBtn {
+    width: 100px;
     height: 30px;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -27,18 +27,18 @@ body {
     background-color: silver;
 }
 
-#clearBtn:hover {
+#clearBtn:hover, #testBtn:hover {
     background-color: aquamarine;
 }
 
-#testBtn {
-    width: 75px;
+#reverseBtn {
+    width: 100px;
     height: 30px;
     border-radius: 10px;
     transition-duration: 0.4s;
     background-color: silver;
 }
 
-#testBtn:hover {
+#reverseBtn:hover {
     background-color: aquamarine;
 }
