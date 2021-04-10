@@ -1,3 +1,7 @@
+document.getElementById("testBtn").addEventListener("click", evalFunction);
+
+
+
 // function to clear the text field when 'clear' button is clicked
 function clearText(){
     document.getElementById("textArea").value="";
