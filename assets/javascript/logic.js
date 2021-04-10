@@ -13,6 +13,7 @@ function evalFunction(){
     li.setAttribute('id', listString.value);
     li.appendChild(document.createTextNode(listString.value));
     ul.appendChild(li);   
+    document.getElementById("textArea").value="";
 }
 
 
