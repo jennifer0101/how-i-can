@@ -30,30 +30,21 @@ function timeDateNow(inputString, result){
     };
     const time = new Intl.DateTimeFormat('en-US', options).format(hours)
     const dateTime = date+" "+time;
-    // console.log(inputString, dateTime, result);
-    const displayMessage = ("The user entered"+" "+inputString+"."+" "+result+" "+dateTime);
-    console.log(displayMessage);
-
+    const userInput = ("The user entered"+" "+inputString+".");
+    addToArray(userInput, inputString, dateTime, result);
 }
 
-// function to take input string and add to an array
-// function addToArray(inputString, result){
-//     const inputArray = inputString.split('');
-//     const lengthArray = inputArray.length;
+// function to take input string and add to an array, count number of items in array
+function addToArray(userInput, inputString, dateTime, result){
+    const inputArray = inputString.split('');
+    const lengthArray = inputArray.length;
+    const displayMessage = (userInput+" "+result+" "+"There are"+" "+lengthArray+" "+"items in the list."+" "+dateTime)
+    addToList(displayMessage, inputArray);
+}
 
-// }
-
-
-
-
-
-
-
-
-
-
-
-
+function addToList(displayMessage, inputArray){
+    
+}
 
 
 
@@ -69,48 +60,6 @@ function timeDateNow(inputString, result){
 //     li.appendChild(document.createTextNode(listString.value));
 //     ul.appendChild(li);   
 //     document.getElementById("textArea").value="";
-
-
-
-
-
-
-
-// psuedo code
-
-// function find result
-
-// function find textarea string (pass result)
-
-//     console log result
-
-//     getElementById textarea/string 
-
-//     console log string
-
-// function date/time (pass string, result)
-
-//     console log result
-
-//     find date and time of entry 
-
-//     console log string + result + date/time
-
-// function textarea amount (pass string, result, date/time)
-
-//     console log string + result + date/time
-
-//     add string to Array
-
-//     loop through array
-
-//     count keystrokes/text
-
-//     console log textarea amount + string + result + date/time
-
-// function display (textarea amount + string + result + date/time)
-
-//     display textarea amount + string + result + date/time into list results 
 
 
 
