@@ -7,52 +7,60 @@ function clearText(){
 
 // function to find if input is a number or text
 function evalFunction(){
-    let inputString = document.getElementById("textArea").value;
+    const inputString = document.getElementById("textArea").value;
     let result;
-    for (let i=0; i < inputString.length; i++) {
-        // console.log('number', x[i]);    
+    for (let i=0; i < inputString.length; i++) {   
     } if(isNaN(inputString)) {
-        // document.getElementById("demo").innerHTML =("The result is text.");
         result = "The result is text.";
     } else {
-        // document.getElementById("demo").innerHTML =("The result is a number.");
         result = "The result is a number.";
     }
-    addToArray(inputString, result);
-    // addToArray(result);
+    timeDateNow(inputString, result);
   }
-
-//   function 
-
-
-// function to take input string and add to an array
-function addToArray(inputString, result){
-    // console.log(result);
-    let stringArray = [];
-    stringArray = inputString
-    // console.log (stringArray);
-    
-    timeDateNow(inputString, result)
-}
 
 // function to get current date and time
 function timeDateNow(inputString, result){
-    let day = new Date ();
-    let date = (day.getMonth()+1)+"/"+day.getDate()+"/"+day.getFullYear();
-    let hours = new Date ();
-    let options = {
+    const day = new Date ();
+    const date = (day.getMonth()+1)+"/"+day.getDate()+"/"+day.getFullYear();
+    const hours = new Date ();
+    const options = {
         hour: 'numeric',
         minute: 'numeric',
         hour12: TextTrackCue
     };
-    let time = new Intl.DateTimeFormat('en-US', options).format(hours)
-    console.log(time)
-    let dateTime = date+" "+time;
-    console.log(inputString, dateTime, result);
+    const time = new Intl.DateTimeFormat('en-US', options).format(hours)
+    const dateTime = date+" "+time;
+    // console.log(inputString, dateTime, result);
+    const displayMessage = ("The user entered"+" "+inputString+"."+" "+result+" "+dateTime);
+    console.log(displayMessage);
+
 }
 
-// function to evaluate text field, take one string, add to list, remove string from text field
-// function evalFunction(){
+// function to take input string and add to an array
+// function addToArray(inputString, result){
+//     const inputArray = inputString.split('');
+//     const lengthArray = inputArray.length;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//add to list
+
    
 //     let ul = document.getElementById("resultsList");
 //     let listString = document.getElementById("textArea");
@@ -61,7 +69,7 @@ function timeDateNow(inputString, result){
 //     li.appendChild(document.createTextNode(listString.value));
 //     ul.appendChild(li);   
 //     document.getElementById("textArea").value="";
-// }
+
 
 
 
