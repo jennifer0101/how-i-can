@@ -1,5 +1,3 @@
-
-
 document.getElementById("testBtn").addEventListener("click", evalFunction);
 
 // function to clear the text field when 'clear' button is clicked
@@ -9,30 +7,49 @@ function clearText(){
 
 // function to find if input is a number or text
 function evalFunction(){
-    let x = document.getElementById("textArea").value;
+    let inputString = document.getElementById("textArea").value;
     let result;
-    for (let i=0; i < x.length; i++) {
+    for (let i=0; i < inputString.length; i++) {
         // console.log('number', x[i]);    
-    } if(isNaN(x)) {
+    } if(isNaN(inputString)) {
         // document.getElementById("demo").innerHTML =("The result is text.");
         result = "The result is text.";
     } else {
         // document.getElementById("demo").innerHTML =("The result is a number.");
         result = "The result is a number.";
     }
-    stringArray(result);
+    addToArray(inputString, result);
+    // addToArray(result);
   }
 
+//   function 
+
+
 // function to take input string and add to an array
-function stringArray(result){
-    console.log(result);
-    // let inputString = document.getElementById("textArea").value;
-    // console.log (inputString);
+function addToArray(inputString, result){
+    // console.log(result);
+    let stringArray = [];
+    stringArray = inputString
+    // console.log (stringArray);
+    
+    timeDateNow(inputString, result)
 }
 
-
-
-
+// function to get current date and time
+function timeDateNow(inputString, result){
+    let day = new Date ();
+    let date = (day.getMonth()+1)+"/"+day.getDate()+"/"+day.getFullYear();
+    let hours = new Date ();
+    let options = {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: TextTrackCue
+    };
+    let time = new Intl.DateTimeFormat('en-US', options).format(hours)
+    console.log(time)
+    let dateTime = date+" "+time;
+    console.log(inputString, dateTime, result);
+}
 
 // function to evaluate text field, take one string, add to list, remove string from text field
 // function evalFunction(){
