@@ -38,27 +38,16 @@ function timeDateNow(inputString, result){
 }
 
 // function to add input items to an array, count number of items
-function addToArray(userInput, inputString, dateTime, result){
-    // const inputArray = inputString;
-    // const inputArray.push = inputArray.length;
-    // const displayMessage = (userInput+" "+result+" "+"There are"+" "+lengthArray+" "+"items in the list."+" "+dateTime)
-    // addToList(displayMessage, inputArray);
-
-
+function addToArray(userInput, dateTime, result){
     textvalue = document.getElementById('textArea').value;
     inputArray.push(textvalue);  
     console.log(inputArray);
-
-    
-      
-    //   let counter = 0;
-    //   for (const obj of storage) {
-    //     if (obj.status === '0') counter++;
-    //   }
-      
-    //   console.log(counter);
+    const lengthArray = inputArray.length;
+    const displayMessage = (userInput+" "+result+" "+"There are"+" "+lengthArray+" "+"items in the list."+" "+dateTime);
+    addToList(displayMessage, inputArray);
 }
 
+// function to add the input text, result, number in array, date and time to list in results area.
 function addToList(displayMessage, inputArray){
     if (inputArray === "") {
         clearText();
@@ -70,25 +59,7 @@ function addToList(displayMessage, inputArray){
         list.appendChild(entry);
     }
     document.getElementById("textArea").value="";
-
 }
-
-
-
-
-
-//add to list
-
-   
-//     let ul = document.getElementById("resultsList");
-//     let listString = document.getElementById("textArea");
-//     let li = document.createElement("li");
-//     li.setAttribute('id', listString.value);
-//     li.appendChild(document.createTextNode(listString.value));
-//     ul.appendChild(li);   
-//     document.getElementById("textArea").value="";
-
-
 
 
 
