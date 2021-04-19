@@ -2,7 +2,7 @@ let inputArray = [];
 
 document.getElementById("clearBtn").addEventListener("click", clearText);
 
-document.getElementById("clearBtn").addEventListener("click", clearArray);
+document.getElementById("clearBtn").addEventListener("click", clearArrayList);
     
 document.getElementById("testBtn").addEventListener("click", evalFunction);
    
@@ -68,8 +68,10 @@ function clearText(){
     document.getElementById("textArea").value="";   
 }
 
-function clearArray(){
+// clear the list results and the input array
+function clearArrayList(){
     inputArray = [];
+    resultsList.innerHTML = "";
 }
 
 
