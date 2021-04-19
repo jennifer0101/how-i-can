@@ -1,3 +1,5 @@
+const inputArray = [];
+
 document.getElementById("testBtn").addEventListener("click", evalFunction);
 
 // function to clear the text field when 'clear' button is clicked
@@ -11,9 +13,9 @@ function evalFunction(){
     let result;
     for (let i=0; i < inputString.length; i++) {   
     } if(isNaN(inputString)) {
-        result = "The result is text.";
+        result = "This is text.";
     } else {
-        result = "The result is a number.";
+        result = "This is a number.";
     }
     timeDateNow(inputString, result);
   }
@@ -26,24 +28,49 @@ function timeDateNow(inputString, result){
     const options = {
         hour: 'numeric',
         minute: 'numeric',
+        second: 'numeric',
         hour12: TextTrackCue
     };
     const time = new Intl.DateTimeFormat('en-US', options).format(hours)
     const dateTime = date+" "+time;
-    const userInput = ("The user entered"+" "+inputString+".");
+    const userInput = ("The user entered:"+" "+inputString+".");
     addToArray(userInput, inputString, dateTime, result);
 }
 
-// function to take input string and add to an array, count number of items in array
+// function to add input items to an array, count number of items
 function addToArray(userInput, inputString, dateTime, result){
-    const inputArray = inputString.split('');
-    const lengthArray = inputArray.length;
-    const displayMessage = (userInput+" "+result+" "+"There are"+" "+lengthArray+" "+"items in the list."+" "+dateTime)
-    addToList(displayMessage, inputArray);
+    // const inputArray = inputString;
+    // const inputArray.push = inputArray.length;
+    // const displayMessage = (userInput+" "+result+" "+"There are"+" "+lengthArray+" "+"items in the list."+" "+dateTime)
+    // addToList(displayMessage, inputArray);
+
+
+    textvalue = document.getElementById('textArea').value;
+    inputArray.push(textvalue);  
+    console.log(inputArray);
+
+    
+      
+    //   let counter = 0;
+    //   for (const obj of storage) {
+    //     if (obj.status === '0') counter++;
+    //   }
+      
+    //   console.log(counter);
 }
 
 function addToList(displayMessage, inputArray){
-    
+    if (inputArray === "") {
+        clearText();
+    } else {
+        const list = document.getElementById("resultsList");
+        const messageResult = displayMessage;
+        const entry = document.createElement('li');
+        entry.appendChild(document.createTextNode(messageResult));
+        list.appendChild(entry);
+    }
+    document.getElementById("textArea").value="";
+
 }
 
 
