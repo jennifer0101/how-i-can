@@ -1,17 +1,16 @@
 const inputArray = [];
 
 document.getElementById("testBtn").addEventListener("click", evalFunction);
-
-// function to clear the text field when 'clear' button is clicked
-function clearText(){
-    document.getElementById("textArea").value="";
-}
-
+   
 // function to find if input is a number or text
 function evalFunction(){
     const inputString = document.getElementById("textArea").value;
+    if (inputString == null || inputString == "") {
+       clearText();
+        return false;
+    }
     let result;
-    for (let i=0; i < inputString.length; i++) {   
+    for (let i=0; i < inputString.length; i++) {  
     } if(isNaN(inputString)) {
         result = "This is text.";
     } else {
@@ -34,7 +33,7 @@ function timeDateNow(inputString, result){
     const time = new Intl.DateTimeFormat('en-US', options).format(hours)
     const dateTime = date+" "+time;
     const userInput = ("The user entered:"+" "+inputString+".");
-    addToArray(userInput, inputString, dateTime, result);
+    addToArray(userInput, dateTime, result);
 }
 
 // function to add input items to an array, count number of items
@@ -61,6 +60,10 @@ function addToList(displayMessage, inputArray){
     document.getElementById("textArea").value="";
 }
 
-
+// function to clear the text field when 'clear' button is clicked
+function clearText(){
+    document.getElementById("textArea").value="";
+    
+}
 
 

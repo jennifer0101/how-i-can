@@ -18,6 +18,18 @@ body {
     margin-bottom: 15px;
 }
 
+#resultsList {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+li {
+    padding-bottom: 10px;
+    line-height: 28px;
+}
+
 #clearBtn, #testBtn {
     width: 100px;
     height: 30px;
