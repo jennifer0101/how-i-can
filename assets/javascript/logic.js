@@ -5,7 +5,18 @@ document.getElementById("clearBtn").addEventListener("click", clearText);
 document.getElementById("clearBtn").addEventListener("click", clearArrayList);
     
 document.getElementById("testBtn").addEventListener("click", evalFunction);
-   
+
+document.getElementById("reverseBtn").addEventListener("click", reverseList);
+  
+// reverse list of results, iterate through list and return each 
+function reverseList(){
+    resultsList.innerHTML = "";
+    const reverseArr = inputArray.reverse();
+    reverseArr.forEach(val => {
+        console.log(val);
+    })
+}
+
 // find if input is a number or text
 function evalFunction(){
     const inputString = document.getElementById("textArea").value;
@@ -43,7 +54,7 @@ function timeDateNow(inputString, result){
 function addToArray(userInput, dateTime, result){
     textvalue = document.getElementById('textArea').value;
     inputArray.push(textvalue);  
-    console.log(inputArray);
+    // console.log(inputArray);
     const lengthArray = inputArray.length;
     const displayMessage = (userInput+" "+result+" "+"There are"+" "+lengthArray+" "+"items in the list."+" "+dateTime);
     addToList(displayMessage);
@@ -73,11 +84,3 @@ function clearArrayList(){
     inputArray = [];
     resultsList.innerHTML = "";
 }
-
-
-    // clear listbox
-
-    // clear Array
-
-
-
